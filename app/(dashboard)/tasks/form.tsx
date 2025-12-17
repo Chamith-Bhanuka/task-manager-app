@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function TaskForm() {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Home</Text>
+            <Text style={styles.title}>Form</Text>
         </View>
     );
 }
