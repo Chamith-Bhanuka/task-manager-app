@@ -2,9 +2,9 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   updateProfile,
-} from '@firebase/auth';
+} from 'firebase/auth';
 import { auth, db } from './firebase';
-import { doc, setDoc } from '@firebase/firestore';
+import { doc, setDoc } from 'firebase/firestore';
 
 export const registerUser = async (
   fullName: string,
