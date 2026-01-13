@@ -57,14 +57,12 @@ export const getAllTasks = async () => {
   });
 };
 
-// 3. READ (Single - for editing)
 export const getTaskById = async (id: string) => {
   const docRef = doc(db, 'tasks', id);
   const snapshot = await getDoc(docRef);
   return snapshot.exists() ? { id: snapshot.id, ...snapshot.data() } : null;
 };
 
-// 4. UPDATE (Toggle Complete)
 export const toggleTaskComplete = async (
   taskId: string,
   currentStatus: boolean
@@ -75,7 +73,6 @@ export const toggleTaskComplete = async (
   });
 };
 
-// 5. UPDATE (Edit Details)
 export const updateTask = async (
   taskId: string,
   title: string,
@@ -88,7 +85,6 @@ export const updateTask = async (
   });
 };
 
-// 6. DELETE
 export const deleteTask = async (taskId: string) => {
   const taskRef = doc(db, 'tasks', taskId);
   await deleteDoc(taskRef);
